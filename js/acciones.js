@@ -7,7 +7,7 @@ $(document).ready(function(e){
 
 function onDeviceReady(){
 	
-	$('#posicion').on('click', function(){
+	$('#posicion').on('click',function(){
 		getPosition ();
 	});
 }
@@ -20,7 +20,7 @@ function getPosition(){
 	
 	var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
 	
-	function onSuccess(position){
+	function onSuccess(posicion){
 		
 		alert('Latitude:' +position.coords.latitude +'\n' + 
 		'Longitude:' +position.coords.longitude +'\n');
